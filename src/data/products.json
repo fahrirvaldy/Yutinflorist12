@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Elegance White Rose",
+    "price": 1500000,
+    "category": "Happy Wedding",
+    "image": "../assets/product/wedding/57.png",
+    "badgeColor": "bg-secondary-fixed"
+  },
+  {
+    "id": 2,
+    "name": "Serene White Lily",
+    "price": 1250000,
+    "category": "Turut Berduka Cita",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAFmCvUmhYH1j3rFlzhRKzuZKXkXHSKguKoGQJQxlAUsJZwSMw4pYC7k8OzUG1d62kH0XiljEotJwCgP6x5_5QG6Ydj-CdvRwvgQPjnKLdcHSkbsSPccN6AJh3LJYpNb_Z5Bu48nNFkMoQMvrI6zQjD3tIBAicevvz3Ddihvwz_Yhk2cTtT8TvAFLv0yQXJeGW7UnIl7146kNHOfI08kIYokYSR6-Ibrfe0_ZFfXsrShDEAxl-3dm16o_9QagGoUvel8W5NaDrB-7U",
+    "badgeColor": "bg-surface-variant"
+  },
+  {
+    "id": 3,
+    "name": "Golden Sunrise",
+    "price": 1800000,
+    "category": "Selamat & Sukses",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDrkTQm_MxmmH0zTGT6C7BN0Zke6Qe4ckvrb-tnlUTAmaKVLPNBpAyc8HmAlGXVNFQTHxCmob2VYNP2OPWnkhml23sJIxtKMhM-KLuBizYtuqezN28svBLoraaAv3aKpG7x1AXS48MCgUookiq7WV0KrFPU-bRFbFYzQAmCkV2l0QmM05-BHCThfO-AhVuQuA2MZCHeFB-tGivSqNx79ZaupVDQHbEZS19oz-rspXFxZfjnuBXZXwrqD-s6zTOjHjhB1El6LYuxqK0",
+    "badgeColor": "bg-primary-fixed"
+  },
+  {
+    "id": 4,
+    "name": "Royal Peony Cascade",
+    "price": 3500000,
+    "category": "Happy Wedding",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBgJUWtmS-y3vQDop8fm-hOvL9oBHnENBbyzbpw2oR4v4zv4o8e_rzivB9-vd3KWTHfyd9a_ah_IF_T8svVir0yd6qbrHADQH6HLfVb1UfXQqgG8gspS0dkHCFgoxcvvpmiPiqU0jYSp10r92wSGRizcIuDCQSX_YUk-CkK2PGuuYzOjzyKXf7eq-QcH2oo-6jr2ooMz0p98QEUyTETioI8BOhLa5EBXK-n8etlJrnDm1KiGV8wrLTXAymRtnyuopPLfVuc53MoV8I",
+    "badgeColor": "bg-secondary-fixed"
+  }
+]

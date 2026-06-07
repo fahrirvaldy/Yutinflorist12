@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Yutin Florist - Bunga Papan Premium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#727973",
+                      "surface-container-high": "#eae7e7",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#53433f",
+                      "surface-container": "#f0eded",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-bright": "#fcf9f8",
+                      "background": "#f4f7fc",
+                      "secondary-fixed": "#f5ddd7",
+                      "tertiary-container": "#414241",
+                      "on-primary-container": "#98b5a3",
+                      "inverse-primary": "#b0cdbb",
+                      "on-tertiary-container": "#afaeac",
+                      "on-surface": "#1c1b1b",
+                      "secondary": "#6c5a56",
+                      "primary-fixed-dim": "#b0cdbb",
+                      "inverse-surface": "#313030",
+                      "on-error": "#ffffff",
+                      "inverse-on-surface": "#f3f0ef",
+                      "outline-variant": "#c2c8c2",
+                      "on-primary-fixed-variant": "#324c3e",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed": "#251915",
+                      "primary": "#0b1b3d",
+                      "secondary-fixed-dim": "#d8c2bc",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface": "#ffffff",
+                      "tertiary": "#2b2c2b",
+                      "primary-fixed": "#ccead6",
+                      "surface-dim": "#dcd9d9",
+                      "tertiary-fixed": "#e4e2e0",
+                      "on-primary-fixed": "#062014",
+                      "tertiary-fixed-dim": "#c7c6c4",
+                      "on-surface-variant": "#424844",
+                      "on-secondary-container": "#705f5a",
+                      "surface-container-highest": "#e5e2e1",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#1b1c1b",
+                      "on-background": "#1c1b1b",
+                      "primary-container": "#2d4739",
+                      "surface-variant": "#e5e2e1",
+                      "surface-tint": "#496455",
+                      "on-tertiary-fixed-variant": "#464746",
+                      "secondary-container": "#f2dbd5",
+                      "surface-container-lowest": "#ffffff",
+                      "marigold": "#e5a93b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "section-gap": "80px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "headline-xl-mobile": [
+                              "Montserrat"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "title-md": [
+                              "Montserrat"
+                      ],
+                      "logo": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-[#ffffff]/90 dark:bg-surface-dim/80 backdrop-blur-md docked full-width top-0 sticky border-b border-outline-variant/30 flat no shadows flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50">
+<div class="flex items-center gap-4">
+
+<span class="font-logo text-headline-lg-mobile font-semibold text-primary tracking-tight">Yutin Florist</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors scale-95 duration-200 ease-in-out p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock">lock</span>
+<span class="font-label-md text-label-md hidden md:inline">Transaksi Aman</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-8 mb-20 md:mb-0">
+<!-- Hero Section (Bento Grid Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-base mb-section-gap">
+<div class="h-64 md:h-96 rounded-xl overflow-hidden relative group md:col-span-12">
+<img alt="Premium floral board" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A massive, luxurious floral board (bunga papan) completely covered in fresh, vibrant flowers like roses, lilies, and orchids. The arrangement is dense and colorful, dominated by deep reds, soft pinks, and pristine whites, set against a dark forest green structural background. The setting is a bright, modern event space with natural light streaming in, creating a premium, celebratory mood suitable for a grand opening or wedding. Minimalist modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpGsOA881mep6dLvJvV6UlOhgrYd4YfOTrPDSwBJ9rBLrPVunEXwcK7zUKfv8lD-3z6o4QuO73v235iXYsZG479hvn0OHYViwLvM6uwKEngzPX2arDV4DFqLlTMMtLC1qBoZ-ygyAwZ0iRQSOY3BjcSoLLVAsExDl1NHl2dh7w6uQpa9A_KRCvsE47zzSTO4381i34V-zh0m2sGljvxb6bvTY1-fIIe3IKwEt-SWwYDMhCQFoxGEzitu5KG20so6y031QbFL6yeks">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+<div>
+<h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary mb-2">Ekspresikan dengan Bunga</h2>
+<p class="font-body-md text-body-md text-on-primary/90 max-w-md">Koleksi papan bunga premium untuk setiap momen berharga. Kualitas terjamin, pengiriman tepat waktu.</p>
+</div>
+</div>
+</div>
+
+</section>
+<!-- Filter Chips -->
+<div class="flex overflow-x-auto hide-scrollbar gap-3 mb-8 pb-2 border-b border-outline-variant/20">
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-label-md text-label-md bg-marigold text-primary font-bold border border-transparent shadow-sm">Semua</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline-variant/50 text-on-surface-variant hover:bg-surface-container-low transition-colors">Happy Wedding</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline-variant/50 text-on-surface-variant hover:bg-surface-container-low transition-colors">Turut Berduka Cita</button>
+<button class="whitespace-nowrap px-6 py-2 rounded-full font-label-md text-label-md bg-surface border border-outline-variant/50 text-on-surface-variant hover:bg-surface-container-low transition-colors">Selamat &amp; Sukses</button>
+</div>
+<!-- Product Catalog (Grid) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<!-- Product Card 1 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-square w-full rounded-lg overflow-hidden bg-surface-container shadow-[0_10px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] group-hover:scale-[1.01]">
+<img alt="Papan Bunga Wedding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A pristine, elegant square floral board designed for a wedding, featuring entirely white and pale pink roses, orchids, and baby's breath. The arrangement is dense and highly structured, creating a sophisticated, high-end appearance. The background of the board is a subtle ivory tone, and the setting is a brightly lit, modern white studio, emphasizing a clean, contemporary botanical aesthetic. Soft, diffused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzQPKQDxmrUBzmQq_J05h1EJNoTxoPteofQJdd7-AuEBcmjxcAfOSfBUd7TqeRIXvdoYyR1TsPzdSZxc4xLk0USgrFn8fENzes8uJZ_a2sQodWSPP0oP_FzfjWjjnYAiIpZ7YG7-nupylxl0J3c00ZxTRGKv1DjTrw4pNZZBaBO1DMoILp1qpGSlK64OgYgt4czo37uJeG2OogI9t34seoLzfRRtAwZKw7N8qYUR_LSlnx_yIBpEch9eYrNhEOgO15STzm1GIoGZg">
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary bg-secondary-fixed w-fit px-2 py-0.5 rounded-sm">Happy Wedding</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Elegance White Rose</h3>
+<p class="font-body-md text-body-md text-marigold font-bold">Rp 1.500.000</p>
+<button class="mt-2 w-full py-2 px-4 rounded-md bg-primary text-on-primary font-label-md text-label-md transition-colors hover:bg-primary/90 flex justify-center items-center gap-2">
+                        Pesan Sekarang
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-square w-full rounded-lg overflow-hidden bg-surface-container shadow-[0_10px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] group-hover:scale-[1.01]">
+<img alt="Papan Bunga Duka Cita" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A solemn and deeply respectful floral board designed for condolences. The arrangement primarily features white lilies, chrysanthemums, and subtle touches of pale blue hydrangeas, set against a dark charcoal grey backdrop. The design is symmetrical and calming. Photographed in a serene, slightly muted lighting environment that conveys sympathy and quiet dignity. Minimalist, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFmCvUmhYH1j3rFlzhRKzuZKXkXHSKguKoGQJQxlAUsJZwSMw4pYC7k8OzUG1d62kH0XiljEotJwCgP6x5_5QG6Ydj-CdvRwvgQPjnKLdcHSkbsSPccN6AJh3LJYpNb_Z5Bu48nNFkMoQMvrI6zQjD3tIBAicevvz3Ddihvwz_Yhk2cTtT8TvAFLv0yQXJeGW7UnIl7146kNHOfI08kIYokYSR6-Ibrfe0_ZFfXsrShDEAxl-3dm16o_9QagGoUvel8W5NaDrB-7U">
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-variant w-fit px-2 py-0.5 rounded-sm">Turut Berduka Cita</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Serene White Lily</h3>
+<p class="font-body-md text-body-md text-marigold font-bold">Rp 1.250.000</p>
+<button class="mt-2 w-full py-2 px-4 rounded-md border-[1.5px] border-primary text-primary font-label-md text-label-md transition-colors hover:bg-primary-fixed flex justify-center items-center gap-2">
+                        Pesan Sekarang
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-square w-full rounded-lg overflow-hidden bg-surface-container shadow-[0_10px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] group-hover:scale-[1.01]">
+<img alt="Papan Bunga Sukses" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vibrant, energetic square floral board celebrating a grand opening. The arrangement bursts with bright yellow sunflowers, orange gerberas, and lush green foliage, set against a warm, earthy terracotta background. The composition is dynamic and cheerful, designed to stand out. Photographed in bright, natural daylight in a modern, airy space, emphasizing a premium, contemporary botanical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrkTQm_MxmmH0zTGT6C7BN0Zke6Qe4ckvrb-tnlUTAmaKVLPNBpAyc8HmAlGXVNFQTHxCmob2VYNP2OPWnkhml23sJIxtKMhM-KLuBizYtuqezN28svBLoraaAv3aKpG7x1AXS48MCgUookiq7WV0KrFPU-bRFbFYzQAmCkV2l0QmM05-BHCThfO-AhVuQuA2MZCHeFB-tGivSqNx79ZaupVDQHbEZS19oz-rspXFxZfjnuBXZXwrqD-s6zTOjHjhB1El6LYuxqK0">
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary bg-primary-fixed w-fit px-2 py-0.5 rounded-sm">Selamat &amp; Sukses</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Golden Sunrise</h3>
+<p class="font-body-md text-body-md text-marigold font-bold">Rp 1.800.000</p>
+<button class="mt-2 w-full py-2 px-4 rounded-md bg-primary text-on-primary font-label-md text-label-md transition-colors hover:bg-primary/90 flex justify-center items-center gap-2">
+                        Pesan Sekarang
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="flex flex-col gap-3 group cursor-pointer">
+<div class="aspect-square w-full rounded-lg overflow-hidden bg-surface-container shadow-[0_10px_20px_rgba(0,0,0,0.04)] transition-all duration-300 group-hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] group-hover:scale-[1.01]">
+<img alt="Papan Bunga Premium Wedding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed, ultra-premium square floral board for a luxury wedding. The design features a cascading arrangement of rare orchids, blush peonies, and trailing ivy, constructed with meticulous artistry. The background is a very dark, rich forest green, making the soft pinks and whites pop vividly. The lighting is studio-quality, creating a dramatic, high-contrast, minimalist and elegant mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgJUWtmS-y3vQDop8fm-hOvL9oBHnENBbyzbpw2oR4v4zv4o8e_rzivB9-vd3KWTHfyd9a_ah_IF_T8svVir0yd6qbrHADQH6HLfVb1UfXQqgG8gspS0dkHCFgoxcvvpmiPiqU0jYSp10r92wSGRizcIuDCQSX_YUk-CkK2PGuuYzOjzyKXf7eq-QcH2oo-6jr2ooMz0p98QEUyTETioI8BOhLa5EBXK-n8etlJrnDm1KiGV8wrLTXAymRtnyuopPLfVuc53MoV8I">
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-primary bg-secondary-fixed w-fit px-2 py-0.5 rounded-sm">Happy Wedding</span>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Royal Peony Cascade</h3>
+<p class="font-body-md text-body-md text-marigold font-bold">Rp 3.500.000</p>
+<button class="mt-2 w-full py-2 px-4 rounded-md border-[1.5px] border-primary text-primary font-label-md text-label-md transition-colors hover:bg-primary-fixed flex justify-center items-center gap-2">
+                        Pesan Sekarang
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+
+<!-- Footer (Desktop Only) -->
+<footer class="hidden md:grid bg-surface-container-highest dark:bg-tertiary-container full-width border-t border-outline-variant/20 flat no shadows w-full py-section-gap px-margin-desktop mt-auto grid grid-cols-1 md:grid-cols-2 gap-base">
+<div class="flex flex-col gap-4">
+<span class="font-title-md text-primary dark:text-primary-fixed-dim font-bold tracking-tight">Yutin Florist</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Premium Floral Boards. Merangkai makna dalam setiap keindahan, menyampaikan pesan dengan elegan dan profesional.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-4">© 2024 Yutin Florist. Premium Floral Boards.</p>
+</div>
+<div class="flex flex-col md:items-end justify-start gap-2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">About Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Shipping Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Contact</a>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+<a href="#" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-[60] group" aria-label="Chat on WhatsApp"><span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform duration-300">chat</span></a></body></html>

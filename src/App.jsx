@@ -1,0 +1,109 @@
+import React, { useState } from 'react';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import AboutModal from './components/layout/AboutModal';
+import PrivacyPolicyModal from './components/layout/PrivacyPolicyModal';
+import TermsOfServiceModal from './components/layout/TermsOfServiceModal';
+import FloatingWhatsapp from './components/layout/FloatingWhatsapp';
+import Hero from './components/catalog/Hero';
+import CategoryTabs from './components/catalog/CategoryTabs';
+import ProductGrid from './components/catalog/ProductGrid';
+import OrderModal from './components/order/OrderModal';
+import SuccessModal from './components/order/SuccessModal';
+import productsData from './data/products.js';
+import { redirectToWhatsapp } from './utils/whatsapp';
+
+const App = () => {
+  const [activeCategory, setActiveCategory] = useState('Semua');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+
+  const filteredProducts = productsData.filter(product => {
+    const matchesCategory = activeCategory === 'Semua' || product.category === activeCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const handleOpenOrder = (product) => {
+    setSelectedProduct(product);
+    setIsOrderModalOpen(true);
+  };
+
+  const handleConfirmOrder = (formData) => {
+    // 1. Jalankan utilitas redirect ke WhatsApp admin
+    redirectToWhatsapp(selectedProduct, formData);
+    
+    // 2. Alihkan state modal ke Success State UI tanpa hard reload
+    setIsOrderModalOpen(false);
+    setIsSuccessModalOpen(true);
+  };
+
+  return (
+    <div className="bg-background text-on-background antialiased min-h-screen flex flex-col font-body">
+      <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+
+      <main className="flex-grow w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-8 mb-20 md:mb-0">
+        <Hero />
+
+        <CategoryTabs
+          activeCategory={activeCategory}
+          onSelect={setActiveCategory}
+        />
+
+        <ProductGrid
+          products={filteredProducts}
+          onOrder={handleOpenOrder}
+        />
+      </main>
+
+      <Footer 
+        onOpenAbout={() => setIsAboutModalOpen(true)} 
+        onOpenPrivacy={() => setIsPrivacyModalOpen(true)}
+        onOpenTerms={() => setIsTermsModalOpen(true)}
+      />
+      <FloatingWhatsapp />
+
+      {/* About Modal */}
+      <AboutModal 
+        isOpen={isAboutModalOpen} 
+        onClose={() => setIsAboutModalOpen(false)} 
+      />
+
+      {/* Privacy Policy Modal */}
+      <PrivacyPolicyModal
+        isOpen={isPrivacyModalOpen}
+        onClose={() => setIsPrivacyModalOpen(false)}
+      />
+
+      {/* Terms of Service Modal */}
+      <TermsOfServiceModal
+        isOpen={isTermsModalOpen}
+        onClose={() => setIsTermsModalOpen(false)}
+      />
+
+      {/* Transactional Modals Layout */}
+      {isOrderModalOpen && (
+        <OrderModal
+          isOpen={isOrderModalOpen}
+          product={selectedProduct}
+          onClose={() => setIsOrderModalOpen(false)}
+          onConfirm={handleConfirmOrder}
+        />
+      )}
+
+      {isSuccessModalOpen && (
+        <SuccessModal
+          isOpen={isSuccessModalOpen}
+          onClose={() => setIsSuccessModalOpen(false)}
+        />
+      )}
+    </div>
+  );
+};
+
+export default App;

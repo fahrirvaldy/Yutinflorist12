@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Yutin Florist - Product Detail &amp; Order Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#727973",
+                        "surface-container-high": "#eae7e7",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#53433f",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-bright": "#fcf9f8",
+                        "background": "#fcf9f8",
+                        "secondary-fixed": "#f5ddd7",
+                        "tertiary-container": "#414241",
+                        "on-primary-container": "#98b5a3",
+                        "inverse-primary": "#b0cdbb",
+                        "on-tertiary-container": "#afaeac",
+                        "on-surface": "#1c1b1b",
+                        "secondary": "#6c5a56",
+                        "primary-fixed-dim": "#b0cdbb",
+                        "inverse-surface": "#313030",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#c2c8c2",
+                        "on-primary-fixed-variant": "#324c3e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#251915",
+                        "primary": "#0b1b3d",
+                        "secondary-fixed-dim": "#d8c2bc",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#2b2c2b",
+                        "primary-fixed": "#ccead6",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed": "#e4e2e0",
+                        "on-primary-fixed": "#062014",
+                        "tertiary-fixed-dim": "#c7c6c4",
+                        "on-surface-variant": "#424844",
+                        "on-secondary-container": "#705f5a",
+                        "surface-container-highest": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1b1c1b",
+                        "on-background": "#1c1b1b",
+                        "primary-container": "#2d4739",
+                        "surface-variant": "#e5e2e1",
+                        "surface-tint": "#496455",
+                        "on-tertiary-fixed-variant": "#464746",
+                        "secondary-container": "#f2dbd5",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display", "serif"],
+                        "headline-xl-mobile": ["Playfair Display", "serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "title-md": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Ambient shadows and tonal layers */
+        .premium-shadow {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Custom scrollbar for modal content */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c2c8c2;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen w-screen overflow-hidden flex items-end md:items-center justify-center relative">
+<!-- Background context (simulating the page underneath) -->
+<div class="absolute inset-0 bg-surface z-0 p-margin-desktop hidden md:block">
+<!-- Dummy content to show context -->
+<h1 class="font-headline-xl text-headline-xl text-[#0B1B3D] mb-gutter">Catalog</h1>
+<div class="grid grid-cols-4 gap-gutter opacity-30">
+<div class="aspect-square bg-surface-container rounded-xl"></div>
+<div class="aspect-square bg-surface-container rounded-xl"></div>
+<div class="aspect-square bg-surface-container rounded-xl"></div>
+<div class="aspect-square bg-surface-container rounded-xl"></div>
+</div>
+</div>
+<!-- Overlay / Backdrop -->
+<div aria-hidden="true" class="fixed inset-0 bg-tertiary-container/40 backdrop-blur-sm z-40 transition-opacity"></div>
+<!-- Modal / Bottom Sheet -->
+<div class="relative z-50 w-full max-w-[800px] bg-surface rounded-t-[32px] md:rounded-[24px] shadow-2xl flex flex-col h-[795px] md:h-[751px] transform transition-transform duration-300 ease-out translate-y-0">
+<!-- Header (Sticky) -->
+<div class="flex justify-between items-center px-6 py-4 border-b border-outline-variant/20 sticky top-0 bg-surface/90 backdrop-blur-md rounded-t-[32px] md:rounded-t-[24px] z-10">
+<h2 class="font-title-md text-title-md text-[#0B1B3D]">Detail Pesanan</h2>
+<button class="p-2 rounded-full hover:bg-surface-container transition-colors text-on-surface-variant group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="close">close</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-6 md:p-8 custom-scrollbar space-y-section-gap">
+<!-- Product Summary Section -->
+<section class="flex gap-6 items-start">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-xl overflow-hidden premium-shadow shrink-0">
+<img alt="Floral board product" class="w-full h-full object-cover" data-alt="A close up shot of a beautiful, premium floral board (bunga papan) arrangement featuring fresh roses, lilies, and vibrant green foliage. The arrangement is elegant and sophisticated, sitting against a clean, off-white minimalist background. The lighting is soft, natural, and flattering, highlighting the rich textures and colors of the premium botanical elements. The overall aesthetic is contemporary, elegant, and corporate-ready." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI2f7CszRbJgo1f0IAbWKmwrVqT-KVrNEGW8r_70VafDwjEyPqzmp_gUi4MmYFZy36E8H89vkXkM4u4ZIA4DkXHkCTbzT6gGPHt8l_MBcwHzbbh0tnUTEu5JRGmuMf2lnRUlEmlx4XCUS1dharx1Em6hB2tsilIDTPka4rgGgec8G31WQ_ORt6r9A1UD5WrEkGb39UPBo7jm7hQu6Wpz2ws1QDurERnlofJjZHwgHgSYWtlqB4DOK787tI9kevFJ7l92GHhBI1-YI"/>
+</div>
+<div class="flex flex-col justify-center h-full pt-2">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-1">Grand Opening</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-[#0B1B3D] mb-2">Elegance Blossom Board</h3>
+<p class="font-body-lg text-body-lg text-[#E5A93B] font-semibold">Rp 1.250.000</p>
+</div>
+</section>
+<!-- Order Form -->
+<section class="space-y-8">
+<!-- Size & Message -->
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md text-[#0B1B3D] border-b border-outline-variant/20 pb-2">Spesifikasi Papan</h4>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="boardSize">Ukuran Papan</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" id="boardSize">
+<option value="S">Small (1.5 x 1.2 m)</option>
+<option selected="" value="M">Medium (2 x 1.25 m)</option>
+<option value="L">Large (2.5 x 1.5 m)</option>
+<option value="Custom">Custom Size</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="boardMessage">Detail Ucapan di Papan</label>
+<textarea class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors resize-none" id="boardMessage" placeholder="Contoh:
+Selamat &amp; Sukses Atas Pembukaan Toko Baru
+Dari: PT. Maju Bersama" rows="4"></textarea>
+</div>
+</div>
+<!-- Sender & Receiver Details -->
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md text-[#0B1B3D] border-b border-outline-variant/20 pb-2">Data Pengirim &amp; Penerima</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Sender -->
+<div class="space-y-4 p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<h5 class="font-label-md text-label-md text-secondary uppercase">Pengirim</h5>
+<div class="space-y-2">
+<label class="sr-only">Nama Pengirim</label>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" placeholder="Nama Pengirim / Perusahaan" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="sr-only">No. HP Pengirim</label>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" placeholder="No. HP Pengirim (WhatsApp)" type="tel"/>
+</div>
+</div>
+<!-- Receiver -->
+<div class="space-y-4 p-4 bg-surface-container-lowest rounded-xl border border-outline-variant/20">
+<h5 class="font-label-md text-label-md text-secondary uppercase">Penerima</h5>
+<div class="space-y-2">
+<label class="sr-only">Nama Penerima</label>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" placeholder="Nama Penerima / Toko" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="sr-only">No. HP Penerima</label>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" placeholder="No. HP Penerima" type="tel"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Delivery Details -->
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md text-[#0B1B3D] border-b border-outline-variant/20 pb-2">Pengiriman</h4>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="address">Alamat Lengkap Pengiriman</label>
+<textarea class="w-full bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors resize-none" id="address" placeholder="Nama Jalan, Gedung, RT/RW, Kelurahan, Kecamatan, Kota..." rows="3"></textarea>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="gmaps">Link Google Maps (Opsional)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant" data-icon="location_on">location_on</span>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg pl-12 pr-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-slate-400 focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" id="gmaps" placeholder="Paste link Google Maps di sini" type="url"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="deliveryDate">Tanggal Kirim</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-on-surface-variant" data-icon="calendar_today">calendar_today</span>
+<input class="w-full bg-surface border border-outline-variant/60 rounded-lg pl-12 pr-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" id="deliveryDate" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-md text-label-md text-[#0B1B3D] font-medium" for="deliveryTime">Waktu Pengiriman</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface border border-outline-variant/60 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-[#0B1B3D] focus:ring-1 focus:ring-[#0B1B3D] transition-colors" id="deliveryTime">
+<option disabled="" selected="" value="">Pilih Waktu</option>
+<option value="pagi">Pagi (08:00 - 12:00)</option>
+<option value="siang">Siang (12:00 - 15:00)</option>
+<option value="sore">Sore (15:00 - 18:00)</option>
+<option value="malam">Malam (18:00 - 21:00)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer / CTA (Sticky) -->
+<div class="p-4 md:p-6 border-t border-outline-variant/20 bg-surface/90 backdrop-blur-md rounded-b-[24px]">
+<button class="w-full min-h-[48px] bg-[#25D366] text-white font-bold rounded-lg font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+                Kirim Pesanan ke WhatsApp
+            </button>
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-3">Pembayaran akan dikonfirmasi via WhatsApp</p>
+</div>
+</div>
+</body></html>
