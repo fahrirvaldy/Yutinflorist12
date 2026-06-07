@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import banner1 from '../../assets/banner/banner-1.png';
-import banner2 from '../../assets/banner/banner-2.png';
+import banner1 from '../../assets/banner/banner-1.webp';
+import banner2 from '../../assets/banner/banner-2.webp';
 
 const Hero = () => {
   const slides = [
