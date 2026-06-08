@@ -51,6 +51,8 @@ const Hero = () => {
           >
             <img
               alt={slide.title}
+              fetchPriority={slide.title === "Ekspresikan dengan Bunga" ? "high" : undefined}
+              loading={slide.title === "Ekspresikan dengan Bunga" ? "eager" : "lazy"}
               className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
               src={slide.image}
             />

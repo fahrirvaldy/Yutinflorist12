@@ -13,7 +13,9 @@ const Footer = ({ onOpenAbout, onOpenPrivacy, onOpenTerms }) => {
           <div className="hidden md:flex flex-col items-center md:items-start">
             <img 
               src={logo} 
-              alt="Yutin Florist" 
+              alt="Yutin Florist Logo" 
+              width="160"
+              height="40"
               className="h-10 md:h-12 w-auto brightness-0 invert mb-6"
             />
             <p className="text-white/60 text-body-sm max-w-md leading-relaxed">

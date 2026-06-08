@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import AboutModal from './components/layout/AboutModal';
-import PrivacyPolicyModal from './components/layout/PrivacyPolicyModal';
-import TermsOfServiceModal from './components/layout/TermsOfServiceModal';
 import FloatingWhatsapp from './components/layout/FloatingWhatsapp';
 import Hero from './components/catalog/Hero';
 import CategoryTabs from './components/catalog/CategoryTabs';
 import ProductGrid from './components/catalog/ProductGrid';
-import OrderModal from './components/order/OrderModal';
-import SuccessModal from './components/order/SuccessModal';
 import productsData from './data/products.js';
 import { redirectToWhatsapp } from './utils/whatsapp';
+
+// Code Splitting: Lazy loading untuk komponen modal guna mengoptimalkan ukuran bundle awal
+const AboutModal = lazy(() => import('./components/layout/AboutModal'));
+const PrivacyPolicyModal = lazy(() => import('./components/layout/PrivacyPolicyModal'));
+const TermsOfServiceModal = lazy(() => import('./components/layout/TermsOfServiceModal'));
+const OrderModal = lazy(() => import('./components/order/OrderModal'));
+const SuccessModal = lazy(() => import('./components/order/SuccessModal'));
 
 const App = () => {
   const [activeCategory, setActiveCategory] = useState('Semua');
@@ -68,40 +70,43 @@ const App = () => {
       />
       <FloatingWhatsapp />
 
-      {/* About Modal */}
-      <AboutModal 
-        isOpen={isAboutModalOpen} 
-        onClose={() => setIsAboutModalOpen(false)} 
-      />
-
-      {/* Privacy Policy Modal */}
-      <PrivacyPolicyModal
-        isOpen={isPrivacyModalOpen}
-        onClose={() => setIsPrivacyModalOpen(false)}
-      />
-
-      {/* Terms of Service Modal */}
-      <TermsOfServiceModal
-        isOpen={isTermsModalOpen}
-        onClose={() => setIsTermsModalOpen(false)}
-      />
-
-      {/* Transactional Modals Layout */}
-      {isOrderModalOpen && (
-        <OrderModal
-          isOpen={isOrderModalOpen}
-          product={selectedProduct}
-          onClose={() => setIsOrderModalOpen(false)}
-          onConfirm={handleConfirmOrder}
+      {/* Lazy Loaded Modals - Wrapped in Suspense to handle async chunk loading */}
+      <Suspense fallback={null}>
+        {/* About Modal */}
+        <AboutModal 
+          isOpen={isAboutModalOpen} 
+          onClose={() => setIsAboutModalOpen(false)} 
         />
-      )}
 
-      {isSuccessModalOpen && (
-        <SuccessModal
-          isOpen={isSuccessModalOpen}
-          onClose={() => setIsSuccessModalOpen(false)}
+        {/* Privacy Policy Modal */}
+        <PrivacyPolicyModal
+          isOpen={isPrivacyModalOpen}
+          onClose={() => setIsPrivacyModalOpen(false)}
         />
-      )}
+
+        {/* Terms of Service Modal */}
+        <TermsOfServiceModal
+          isOpen={isTermsModalOpen}
+          onClose={() => setIsTermsModalOpen(false)}
+        />
+
+        {/* Transactional Modals Layout */}
+        {isOrderModalOpen && (
+          <OrderModal
+            isOpen={isOrderModalOpen}
+            product={selectedProduct}
+            onClose={() => setIsOrderModalOpen(false)}
+            onConfirm={handleConfirmOrder}
+          />
+        )}
+
+        {isSuccessModalOpen && (
+          <SuccessModal
+            isOpen={isSuccessModalOpen}
+            onClose={() => setIsSuccessModalOpen(false)}
+          />
+        )}
+      </Suspense>
     </div>
   );
 };
