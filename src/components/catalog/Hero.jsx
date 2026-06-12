@@ -71,10 +71,10 @@ const Hero = () => {
                   index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                 }`}
               >
-                <h2 className="font-headline text-headline-xl-mobile md:text-headline-xl text-white mb-2">
+                <h1 className="font-headline text-title-sm md:text-title-md text-white mb-2">
                   {slide.title}
-                </h2>
-                <p className="font-body text-body-md text-white/90 max-w-md">
+                </h1>
+                <p className="font-body text-[10px] md:text-xs text-white/90 max-w-md">
                   {slide.description}
                 </p>
               </div>
@@ -98,21 +98,6 @@ const Hero = () => {
           <span className="material-symbols-outlined text-2xl md:text-3xl">chevron_right</span>
         </button>
 
-        {/* Indicator Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2 transition-all duration-300 rounded-full ${
-                index === currentIndex 
-                  ? 'w-8 bg-marigold' 
-                  : 'w-2 bg-white/50 hover:bg-white/80'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

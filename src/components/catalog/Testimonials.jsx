@@ -35,9 +35,9 @@ const testimonials = [
   },
   {
     id: 5,
-    name: 'Citra Lestari',
+    name: 'Bangkit Fauzan',
     category: 'Pelanggan Retail - Happy Wedding',
-    initials: 'CL',
+    initials: 'BF',
     content: 'Sangat suka dengan rangkaian bunganya! Cantik sekali dan harum. Proses pemesanan lewat WhatsApp juga sangat mudah dan adminnya ramah.',
     rating: 5
   }
