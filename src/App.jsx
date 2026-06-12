@@ -3,6 +3,8 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import FloatingWhatsapp from './components/layout/FloatingWhatsapp';
 import Hero from './components/catalog/Hero';
+import Testimonials from './components/catalog/Testimonials';
+import ClientShowcase from './components/catalog/ClientShowcase';
 import CategoryTabs from './components/catalog/CategoryTabs';
 import ProductGrid from './components/catalog/ProductGrid';
 import productsData from './data/products.js';
@@ -62,6 +64,9 @@ const App = () => {
           onOrder={handleOpenOrder}
         />
       </main>
+
+      <Testimonials />
+      <ClientShowcase />
 
       <Footer 
         onOpenAbout={() => setIsAboutModalOpen(true)} 
