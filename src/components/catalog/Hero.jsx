@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import banner1 from '../../assets/banner/banner-1.webp';
 import banner2 from '../../assets/banner/banner-2.webp';
+import banner3 from '../../assets/banner/banner-3.webp';
 
 const Hero = () => {
   const slides = [
@@ -15,6 +16,12 @@ const Hero = () => {
       image: banner2,
       title: "Momen Spesial Lebih Berkesan",
       description: "Hadirkan keindahan dan kehangatan dalam setiap perayaan Anda dengan rangkaian bunga terbaik kami."
+    },
+    {
+      id: 3,
+      image: banner3,
+      title: "Wakili Kehadiran, Sampaikan Kepedulian",
+      description: "Karangan bunga papan elegan untuk ucapan selamat hingga duka cita. Kami bantu Anda mengirimkan simpati dan kebahagiaan secara sempurna."
     }
   ];
 
@@ -40,7 +47,7 @@ const Hero = () => {
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-12 gap-base mb-section-gap">
-      <div className="w-full h-auto aspect-[9/16] rounded-2xl overflow-hidden relative group md:col-span-12">
+      <div className="w-full max-w-md md:max-w-[480px] mx-auto aspect-[1080/1350] rounded-2xl overflow-hidden relative group md:col-span-12">
         {/* Slides Container */}
         {slides.map((slide, index) => (
           <div
@@ -51,13 +58,14 @@ const Hero = () => {
           >
             <img
               alt={slide.title}
-              fetchPriority={slide.title === "Ekspresikan dengan Bunga" ? "high" : undefined}
-              loading={slide.title === "Ekspresikan dengan Bunga" ? "eager" : "lazy"}
-              className="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+              className="w-full h-full object-cover object-center transition-transform duration-[2000ms] group-hover:scale-105"
               src={slide.image}
             />
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent flex items-end p-6 md:p-12">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end p-6 md:p-8">
               <div 
                 className={`max-w-2xl transition-all duration-700 delay-300 transform ${
                   index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
