@@ -37,7 +37,7 @@ const ClientShowcase = () => {
     <section className="py-12 bg-white overflow-hidden border-t border-gray-50">
       <div className="container mx-auto px-4 mb-6">
         <h3 className="text-center text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-primary opacity-50">
-          Trusted by Industry Leaders
+          Telah Dipercaya oleh Berbagai Perusahaan & Instansi
         </h3>
       </div>
       
