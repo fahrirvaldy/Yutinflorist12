@@ -4,4 +4,4 @@ Disallow: /components/
 Disallow: /utils/
 
 # Tentukan Alamat Peta Situs Resmi Anda
-Sitemap: https://yutinflorist12.vercel.app/sitemap.xml
+Sitemap: https://www.yutinflorist12.com/sitemap.xml
