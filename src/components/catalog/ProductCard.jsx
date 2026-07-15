@@ -31,7 +31,16 @@ const ProductCard = ({ product, onOrder }) => {
         {product.category}
       </span>
       <h3 className="font-headline text-title-md text-on-surface line-clamp-1">{product.name}</h3>
-      <p className="font-body text-body-md text-marigold font-bold">{formatPrice(product.price)}</p>
+      <div className="flex items-center gap-2">
+        {product.originalPrice && (
+          <p className="font-body text-body-md text-on-surface-variant line-through">
+            {formatPrice(product.originalPrice)}
+          </p>
+        )}
+        <p className="font-body text-body-md text-marigold font-bold">
+          {formatPrice(product.price)}
+        </p>
+      </div>
       <button
         className="mt-2 w-full py-2 px-4 rounded-md bg-[#454443] text-white font-body text-label-md transition-colors hover:bg-[#454443]/90 flex justify-center items-center gap-2"
         onClick={(e) => {

@@ -63,7 +63,7 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
           
           <ProductSummary 
             product={product} 
-            computedPrice={formData.boardSize === '1.50 x 2 m' ? product.price + 150000 : product.price} 
+            computedPrice={formData.boardSize === '1.50 x 2 m' ? product.price + 200000 : product.price} 
           />
 
           {/* Board Specifications */}
