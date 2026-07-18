@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const SuccessModal = ({ isOpen, onClose }) => {
+
+const SuccessModal = ({ isOpen, onClose, orderValue }) => {
+  useEffect(() => {
+    // Kode Pixel hanya akan berjalan jika modal terbuka
+    if (isOpen && window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: orderValue || 0, // Ambil nominal dinamis dari harga produk
+        currency: 'IDR'         // MEMPERBAIKI ERROR: Mengirimkan kode mata uang yang valid
+      });
+    }
+  }, [isOpen, orderValue]);
+
+
   if (!isOpen) return null;
 
   return (

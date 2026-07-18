@@ -24,6 +24,8 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
     'Selamat & Sukses': "Contoh: Selamat & Sukses atas Pembukaan Cabang Baru Toko Berkah. Dari: PT. Sinar Sejahtera"
   };
 
+  const finalPrice = formData.boardSize === '1.50 x 2 m' ? product.price + 200000 : product.price;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -31,7 +33,7 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onConfirm(formData);
+    onConfirm(formData,finalPrice);
   };
 
   if (!isOpen) return null;
@@ -93,7 +95,7 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
               {formData.boardSize === '1.50 x 2 m' && (
                 <p className="text-xs text-marigold font-medium mt-1.5 flex items-center gap-1">
                   <span className="material-symbols-outlined text-sm">info</span>
-                  Pilihan ukuran ini mengenakan biaya tambahan Rp 150.000 (Otomatis ditambahkan ke harga di atas).
+                  Pilihan ukuran ini mengenakan biaya tambahan Rp 200.000 (Otomatis ditambahkan ke harga di atas).
                 </p>
               )}
             </div>

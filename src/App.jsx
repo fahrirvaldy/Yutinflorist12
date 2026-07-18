@@ -26,6 +26,7 @@ const App = () => {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+  const [orderPrice, setOrderPrice] = useState(0);
 
   const filteredProducts = productsData.filter(product => {
     const matchesCategory = activeCategory === 'Semua' || product.category === activeCategory;
@@ -38,7 +39,8 @@ const App = () => {
     setIsOrderModalOpen(true);
   };
 
-  const handleConfirmOrder = (formData) => {
+  const handleConfirmOrder = (formData, finalPrice) => {
+    setOrderPrice(finalPrice);
     // 1. Jalankan utilitas redirect ke WhatsApp admin
     redirectToWhatsapp(selectedProduct, formData);
     
@@ -109,6 +111,7 @@ const App = () => {
           <SuccessModal
             isOpen={isSuccessModalOpen}
             onClose={() => setIsSuccessModalOpen(false)}
+            orderValue={orderPrice}
           />
         )}
       </Suspense>
