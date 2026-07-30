@@ -37,6 +37,23 @@ const App = () => {
   const handleOpenOrder = (product) => {
     setSelectedProduct(product);
     setIsOrderModalOpen(true);
+
+    // Track Meta Pixel Events
+    if (window.fbq) {
+      const productData = {
+        content_name: product.name,
+        content_ids: [product.id],
+        content_type: 'product',
+        value: product.price,
+        currency: 'IDR'
+      };
+      
+      // 1. Track ViewContent when the modal opens
+      window.fbq('track', 'ViewContent', productData);
+
+      // 2. Track AddToCart as opening the modal is the 'add to cart' action
+      window.fbq('track', 'AddToCart', productData);
+    }
   };
 
   const handleConfirmOrder = (formData, finalPrice) => {

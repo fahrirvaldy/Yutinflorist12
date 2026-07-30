@@ -56,7 +56,10 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
       });
 
       // 4. Track the event
-      window.fbq('track', 'InitiateCheckout');
+      window.fbq('track', 'InitiateCheckout', {
+        value: finalPrice,
+        currency: 'IDR'
+      });
     }
 
     onConfirm(formData, finalPrice);
