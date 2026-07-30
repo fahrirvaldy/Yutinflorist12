@@ -41,6 +41,15 @@ const App = () => {
 
   const handleConfirmOrder = (formData, finalPrice) => {
     setOrderPrice(finalPrice);
+
+    // Meta Pixel Purchase Event Tracking
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', { 
+        value: finalPrice, 
+        currency: 'IDR' 
+      });
+    }
+
     // 1. Jalankan utilitas redirect ke WhatsApp admin
     redirectToWhatsapp(selectedProduct, formData);
     

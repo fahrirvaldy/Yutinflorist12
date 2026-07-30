@@ -33,7 +33,33 @@ const OrderModal = ({ product, isOpen, onClose, onConfirm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onConfirm(formData,finalPrice);
+
+    // Meta Pixel Advanced Matching
+    if (window.fbq) {
+      const { senderName, senderPhone } = formData;
+
+      // 1. Format Name (lowercase is standard practice)
+      const formattedName = senderName.toLowerCase();
+
+      // 2. Format Phone Number to start with 62
+      let formattedPhone = senderPhone.replace(/[^0-9]/g, ''); // Remove non-numeric chars
+      if (formattedPhone.startsWith('0')) {
+        formattedPhone = '62' + formattedPhone.substring(1);
+      } else if (!formattedPhone.startsWith('62')) {
+        formattedPhone = '62' + formattedPhone;
+      }
+      
+      // 3. Re-initialize Pixel with user data
+      window.fbq('init', '2115571905841249', {
+        ph: formattedPhone,
+        fn: formattedName,
+      });
+
+      // 4. Track the event
+      window.fbq('track', 'InitiateCheckout');
+    }
+
+    onConfirm(formData, finalPrice);
   };
 
   if (!isOpen) return null;

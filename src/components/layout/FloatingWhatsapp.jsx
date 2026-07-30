@@ -1,9 +1,22 @@
 import React from 'react';
 
 const FloatingWhatsapp = () => {
+  const handleWhatsappClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+
+    // Track Meta Pixel event
+    if (window.fbq) {
+      window.fbq('track', 'Contact');
+    }
+
+    // Proceed to WhatsApp
+    window.open(e.currentTarget.href, '_blank');
+  };
+
   return (
     <a
       href="https://wa.me/6285892118307"
+      onClick={handleWhatsappClick}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-[60] group"
